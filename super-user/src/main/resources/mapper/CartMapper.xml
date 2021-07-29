@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pzhu.youzaiyouzai.supermarket.user.mapper.CartMapper">
+
+<!--    <resultMap id="carts" type="com.pzhu.youzaiyouzai.supermarket.user.pojo.Cart">
+&lt;!&ndash;        <association property="pointGoods" column="goodId"
+                     javaType="com.pzhu.youzaiyouzai.supermarket.user.pojo.PointGoods"
+                     select="selectPointGoods"
+                     fetchType="lazy"
+        >
+        </association>&ndash;&gt;
+        &lt;!&ndash;这个select意思是，当要使用idCard对象时，再到IdcardMapper接口中去查找填充  fetchType="lazy"&ndash;&gt;
+    </resultMap>-->
+    <!--List<Cart> selectCarts(String phoneNum);-->
+    <select id="selectCarts" resultType="com.pzhu.youzaiyouzai.supermarket.user.pojo.Cart" parameterType="string">
+        select * from cart where user_phone = #{param1}
+    </select>
+<!--    <select id="selectPointGoods" resultType="com.pzhu.youzaiyouzai.supermarket.user.pojo.PointGoods" parameterType="Integer">
+         select * from point_goods where id = #{param1}
+    </select>-->
+</mapper>

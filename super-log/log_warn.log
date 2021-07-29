@@ -1,0 +1,2 @@
+2021-07-13 09:12:15.820 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.pzhu.youzaiyouzai.supermarket.admin]' package. Please check your configuration.
+2021-07-13 09:12:20.901 [main] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType java.lang.Integer[]
